@@ -1,0 +1,63 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function mostrar() {
+            alert(document.getElementById("nombre").value)
+            alert(document.getElementById("mail").value)
+            alert(document.getElementById("comentarios").value)
+        }
+    </script>
+
+    <form>
+        Ingrese su Nombre<br>
+        <input type="text" id="nombre"><br><br> Ingrese su Mail:
+        <br>
+        <input type="text" id="mail"><br><br> Comentarios: <br>
+        <textarea id="comentarios" rows="10" cols="50"></textarea><br><br>
+        <input type="button" value="Mostrar" onclick="mostrar()">
+    </form>
+
+
+</body>
+
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function vaciar(control) {
+            control.value = '';
+        }
+
+        function verificarEntrada(control) {
+            if (control.value.length < 7)
+                alert('Debe ingresar una clave con mas de 7 digitos');
+            if (control.value.length > 20)
+                alert('Debe ingresar una clave menos de 20 digitos');
+        }
+    </script>
+
+    <form>
+        <input type="text" id="nombre" onFocus="vaciar(this)" onBlur="verificarEntrada(this)" value="nombre"><br>
+        <input type="password" id="clave" onFocus="vaciar(this)" onBlur="verificarEntrada(this)" value="clave">
+        <br>
+        <input type="button" value="Confirmar">
+    </form>
+</body>
+
+</html>
